@@ -1,0 +1,79 @@
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(145deg, #131a26, #1b2436);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid #303f56;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffcc;
+}
+
+.subtitle {
+    color: #8a99ad;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.code-box {
+    background-color: #070a10;
+    border: 1px dashed #00ffcc;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: #ffffff;
+    word-break: break-all;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #00ffcc;
+    color: #0b0f19;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #00cca3;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+.toast {
+    visibility: hidden;
+    color: #00ffcc;
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}

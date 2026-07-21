@@ -1,0 +1,72 @@
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(145deg, #131a26, #1b2436);
+    padding: 30px 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid #303f56;
+    text-align: center;
+    max-width: 600px;
+    width: 95%;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffcc;
+}
+
+.subtitle {
+    color: #8a99ad;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.weapon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.weapon-card {
+    background-color: #070a10;
+    border: 1px solid #223147;
+    padding: 18px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 文字を真ん中に寄せます */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.weapon-card:hidden {
+    background-color: #111724;
+}
+
+.weapon-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    color: #00ffcc;
+    word-break: break-all;
+    line-height: 1.4;
+    width: 100%;
+    user-select: all; /* 一部のブラウザで自動全選択をサポート */
+    -webkit-user-select: all;
+}

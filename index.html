@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デルタフォース 武器カスタム共有</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Delta Force Weapon Loadout</h1>
+        <p class="subtitle">URLから読み込まれた武器カスタムコードです</p>
+        
+        <div class="code-box">
+            <span id="customCode">コードを読み込み中...</span>
+        </div>
+
+        <button id="copyBtn" onclick="copyToClipboard()">コードをコピーする</button>
+        <p id="toast" class="toast">コピーしました！</p>
+    </div>
+
+    <script>
+        // URLの「?code=〇〇」からコードを自動抽出するスクリプト
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            
+            if (code) {
+                document.getElementById('customCode').innerText = code;
+            } else {
+                document.getElementById('customCode').innerText = "URLの末尾に ?code=武器コード を入力してください";
+                document.getElementById('copyBtn').style.display = "none";
+            }
+        }
+
+        // クリップボードにコピーする機能
+        function copyToClipboard() {
+            const codeText = document.getElementById('customCode').innerText;
+            navigator.clipboard.writeText(codeText).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2000);
+            }).catch(err => {
+                alert('コピーに失敗しました: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
